@@ -1,0 +1,87 @@
+公式：【a,b】:(int)(Math.random()*(b-a+1)+a); 此时可以得到{a,b}区间中的任何一个值
+
+计算某日是该年的第几天
+ import java.util.Scanner;
+  class Main{
+    public static void main(String[] args){
+         Scanner sc = new Scanner(System.in);
+            System.out.println("请输入2019年的月份");
+           int month = sc.nextInt();
+             System.out.println("请输入2019年的日期");
+            int day =sc.nextInt();
+            int sumDays=0;
+            if(month == 1)
+            {
+                sumday=day;
+            }
+             else if(month == 2){
+                sumdays =31+day;
+             }
+             else if(month == 3){
+                sumday=day+59;
+             }
+             .....
+             else{
+                  sumdays = 31-day+365;
+             }
+    }
+  }   
+      方式二：
+          switch(month){
+             case 1:
+                sumdays = day;
+                break;
+              case 2:
+                sumdays = 31+day;
+                break;
+               case 3:
+               .........
+          }
+        方式三：
+             switch(month){
+             case 12：
+                sumdays +=31;
+              case 11:
+                  sumdays +=30；
+               case 10:
+                   sumdays +=31;
+                case 9:
+                    sumdays += 20;
+                  case 8:
+                     sumddays += 30;
+                  case 7:
+                      sumdays += 31;
+                   case 6:
+                     sumdays +=30;
+                    case 5:
+                      sumdays +=31;
+                     .......
+                     case 1:
+                       sumdays +=31;
+                    
+            
+        
+             }
+                 System.out.println("2019年"+month+"月"+day+"日是当年的第"+sumdays+"天")；
+             }
+             
+             求最大公约数：
+             int  min;
+             int min=(a<b)？a:b;
+             for(int i=min;i>=1;i--){
+                 if(m%i==0&&n%i==0){
+                   System.out.println(i);
+                   break;
+                 }
+                 求最小公倍数
+               int max=(a>=b)?a:b;
+               for(int i=max;i<=m*n;i++){
+                 if(i%m==0&&i%n==0)
+                 {
+                   System.out.println(i);
+                   break;
+                 }
+               }
+             }
+              
+             
